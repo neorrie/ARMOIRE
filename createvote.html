@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <title> Armoire</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="css/createvote.css" rel="stylesheet">
+    
+  </head>
+  <body class="pb-5">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+  
+        <a href="dashboard.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+          <h1>ARMOIRE</h1>
+        </a>
+        
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="dashboard.html">Closet</a></li>
+            <li><a href="addOutfit.html">Create Outfit</a></li>
+            <li><a href="createvote.html" style="text-decoration: 2px underline #482B1B">Create Poll</a></li>
+            <li><a href="existingvotes.html">Polls</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+        
+        <!-- .navbar -->
+        <button onclick="cfmLogoutPopup()" class="btn align-self-end"><i class="bi bi-box-arrow-right mx-2"></i>Log Out</button>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+      </div>
+
+              <!-- LOGOUT POPUP -->
+              <div class="overlay" id="logoutOverlay">
+                <div class="popup" id="logoutPopup">
+                    <h2>Confirm Log Out?</h2>
+                    <div class="row">
+                        <button class="btn-standard mb-3" onclick="logout()">Yes</button>
+                        <button class="cancelbtn" onclick="closeLogoutPopup()">Back</button>                            
+                    </div>
+                </div>
+              </div>
+    </header>
+
+    
+
+  <div class="container position-relative shadow-sm my-5 py-5 px-5" id="containerContent">
+    <a href="dashboard.html"><i class='bi bi-arrow-left backArrow' style="font-size:32px;"></i></a>
+    
+      <!-- <div class="col-7 mx-auto px-4 my-auto"> -->
+        <h1>Create a Poll</h1>
+        <!-- Fit title -->
+        <label for="voteTitle" class="form-label mb-2">Name of poll:</label>
+        <input class="form-control form-control-lg mb-1" type="text" placeholder="Eg. Blue or Black themed?" id="voteTitle" required>
+        <div id="voteTitleHelp" class="form-text mb-4">We recommend keeping your title at most 40 characters long.</div>
+
+        <!-- Fit description -->
+        <label for="Occasion" class="form-label mb-2">Occasion:</label>
+        <input type="text" class="form-control mb-1" placeholder="What's the special occasion?" id="voteOccasion">
+        <div id="voteOccasionHelp" class="form-text mb-4">We recommend keeping your description to at most 200 characters long.</div>
+
+        <div class="voteSel">
+          <label for="imageVote" class="form-label mb-2">Select 2 images for your vote!</label>
+          <!-- <p class="text-center">Select 2 images for your vote!</p> -->
+        </div>
+
+        <div>
+          <span id="notvalid" style="color:red; font-style: italic;"></span>
+        </div>
+
+        <section class="row">
+          <p id="errorImage" style="font-style: italic; color:  red"></p>
+          <div class="outfitSelContainer" id="imagegallery">
+          </div>
+        </section>
+
+
+      <!-- Save outfit button-->
+      <!-- <button class="addOutfit my-4" type="submit" onclick="add()" id="submitbtn">Create Vote</button> -->
+      <button class="btn-standard my-3 w-100" type="submit" id="submitbtn">Create Vote</button>
+
+      
+      </div>
+      
+
+    </div>
+    </div>
+  <!-- </div> -->
+    <!-- start of popup html, only appears when you click close -->
+    <div class="overlay" id="Overlay">
+      <div class="popup" id="PopUp">
+          <h2>Poll has been created</h2>
+          <div class="row">
+              <button class="btn-standard" onclick="window.location.href = 'dashboard.html'">Close</button>                   
+          </div>
+      </div>
+  </div>
+
+    <!-- LOGOUT POPUP -->
+    <div class="overlay" id="logoutOverlay">
+      <div class="popup" id="logoutPopup">
+          <h2>Confirm Log Out?</h2>
+          <div class="row">
+              <button class="btn-standard mb-2" onclick="logout()">Yes</button>
+              <button class="cancelbtn" onclick="closeLogoutPopup()">Back</button>                            
+          </div>
+      </div>
+    </div>
+
+</body>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="js/createVote.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</html>

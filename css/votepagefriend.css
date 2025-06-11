@@ -1,0 +1,164 @@
+
+
+  #voteContainer{
+    width: 1200px;
+    border-radius: 10px;
+    background-color:  #F9F6F2;
+    margin: auto;
+  }
+
+  .card {
+    background-color: #E5D5C6;
+  }
+
+  /* .friendsHeader {
+    font-size: larger;
+    margin-bottom: 40px;
+  } */
+
+  hr{
+    color: #482B1B;
+  }
+
+
+  #votetitle,
+  #voteOccasion,
+  .card-header,
+  .card-title {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+  }
+
+  #votetitle{
+      color: #482B1B;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+  }
+
+  #voteOccasion {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  img {
+      height: 450px;
+  }
+
+  #friendSeePage {
+    margin-bottom: 40px;
+  }
+
+  #input1,
+  #input2 {
+    font-weight: bold;
+  }
+
+  /* Like Buttons */
+  #likebtn1,
+  #likebtn2 {
+    font-family: var(--font-secondary);
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    padding: 12px 36px;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: #fff;
+    background: var(--color-primary);
+    border: 0px;
+  }
+
+  #likebtn1:hover,
+  #likebtn2:hover {
+    background-color:#D0A68E;
+  }
+
+  #likebtn1:disabled,
+  #likebtn2:disabled,
+  #likebtn1[disabled],
+  #likebtn2[disabled] {
+    opacity: 0.5;
+  }
+
+  /* popup */
+.popup{
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  padding: 40px;
+  color: #333;
+  display:none;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 1000;
+  }
+  
+  .popup h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 30px;
+  color:#482B1B;
+  }
+  
+  .popup .backtologinbtn {
+  font-family: var(--font-secondary);
+  width: 100%;
+  font-weight: 600;
+  font-size: 12px;
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #fff;
+  background: #482B1B;
+  border: 0px;
+  }
+  .popup .backtologinbtn:hover {
+    background: #D0A68E;
+    color: #fff;
+  }
+  
+  .popup .cancelbtn {
+  font-family: var(--font-secondary);
+  width: 100%;
+  font-weight: 600;
+  font-size: 12px;
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #482B1B;
+  background: white;
+  border: 1px solid #482B1B;
+  }
+  
+  .popup .cancelbtn:hover{
+    border: 1px solid #D0A68E;
+    color: #D0A68E
+  }
+  
+  #overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+  z-index: 999; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  }

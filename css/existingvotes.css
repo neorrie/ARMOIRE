@@ -1,0 +1,80 @@
+  .container{
+    width: 1200px;
+    border-radius: 10px;
+    background-color:  #F9F6F2;
+    overflow: auto;
+  }
+
+  #containerContent {
+    position: relative;
+    top: 100px;
+  }
+
+  .pollHeader {
+    color:#482B1B;
+  }
+  
+
+
+  /* Tab Styling */
+  #pollBorder{
+    border-right-style: solid;
+    border-right-width: 4px;
+    border-right-color: #E5D5C6;
+  }
+
+  .tablink ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  
+    }
+    
+    .tablink li {
+    position: relative;
+    /* border-bottom: 4px solid #E5D5C6; */
+    }
+
+    .tablink {
+    border: 0px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 8px 20px 8px 20px;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E5D5C6;
+    background-color: #482B1B ;
+    white-space: nowrap;
+    transition: 0.3s;
+    justify-content: center;
+    }
+
+    #tablink {
+      /* position: -webkit-sticky; 
+      position: sticky; 
+      top: 100px; 
+      z-index: 1020; */
+      position: relative;
+      top: 100px;
+    }
+    
+    .tablink:hover,
+    .tablink li:hover,
+    .tablink:active,
+    .tablink li:active {
+      color: #fff;
+      border-color: #E5D5C6;
+    }
+
+  /* All links */
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
+

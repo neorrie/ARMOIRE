@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <title> Armoire</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+  
+        <a href="dashboard.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+          <h1>ARMOIRE</h1>
+        </a>
+        
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="dashboard.html" style="text-decoration: 2px underline #482B1B">Closet</a></li>
+            <li><a href="addOutfit.html">Create Outfit</a></li>
+            <li><a href="createvote.html">Create Poll</a></li>
+            <li><a href="existingvotes.html">Polls</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+        
+        <!-- .navbar -->
+        <button onclick="cfmLogoutPopup()" class="btn align-self-end"><i class="bi bi-box-arrow-right mx-2"></i>Log Out</button>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+      </div>
+    </header>
+
+
+    <!-- filter section -->
+    <div id="tablink" class="tablink justify-content-center">
+      <ul class="row" id="filters">
+          <li class="col filters tablink" onclick="filterSelection('all')" id="all">Show All</li>
+          <li class="col filters tablink" onclick="filterSelection('formal')" id="formal">Formal</li>
+          <li class="col filters tablink" onclick="filterSelection('casual')" id="casual">Casual</li>
+          <li class="col filters tablink" onclick="filterSelection('athleisure')" id="athleisure">Athleisure</li>
+          <li class="col filters tablink" onclick="filterSelection('streetwear')" id="streetwear">Streetwear</li>
+          <li class="col filters tablink" onclick="filterSelection('party')" id="party">Party</li>
+          <li class="col filters tablink" onclick="filterSelection('minimal')" id="minimal">Minimal</li>
+          <li class="col filters tablink" onclick="filterSelection('bohemian')" id="bohemian">Bohemian</li>
+          <li class="col filters tablink" onclick="filterSelection('others')" id="others">Others</li>
+      </ul>
+  </div>
+
+  <div class="dashboard" id="containerContent">
+    <div class="container-fluid">
+      <p id="countResults"></p>
+      <div class="row" id="dashboard"></div>
+      <div id="popup">
+        <img src="" id="selectedImage">
+        <img>
+      </div>
+        <!-- LOGOUT POPUP -->
+        <div class="overlay" id="logoutOverlay">
+          <div class="popup" id="logoutPopup">
+              <h2>Confirm Log Out?</h2>
+              <div class="row">
+                  <button class="btn-standard mb-3" onclick="logout()">Yes</button>
+                  <button class="cancelbtn" onclick="closeLogoutPopup()">Back</button>                            
+              </div>
+          </div>
+        </div>
+  </div>        
+  
+
+
+  <a href="addOutfit.html" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-plus"></i></a>
+  </body>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> 
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script> 
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- MAIN JS -->
+  <script src="assets/js/main.js"></script>
+
+
+  <!-- firebase js  -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script src="js/dashboard.js" defer></script>
+</html>

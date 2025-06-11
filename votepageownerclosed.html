@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <title> Armoire</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="css/votepageowner.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top position-relative">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+  
+        <a href="dashboard.html" class="logo d-flex align-items-center me-auto me-lg-0 \">
+          <h1>ARMOIRE</h1>
+        </a>
+        
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="dashboard.html">Closet</a></li>
+            <li><a href="addOutfit.html">Create Outfit</a></li>
+            <li><a href="createvote.html">Create Poll</a></li>
+            <li><a href="existingvotes.html" style="text-decoration: 2px underline #482B1B">Polls</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li></li>
+          </ul>
+        </nav>
+        
+        <!-- .navbar -->
+        <button onclick="cfmLogoutPopup()" class="btn align-self-end"><i class="bi bi-box-arrow-right mx-2"></i>Log Out</button>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  
+      </div>
+    </header>
+
+
+    <div class="container shadow-sm py-5 px-5" id="voteContainer">
+      <a href="dashboard.html"><i class='bi bi-arrow-left backArrow' style="font-size:32px;"></i></a>
+      
+      <h1 id="votetitle" class="my-3">Vote Title</h1>
+      <p id="voteOccasion">Occasion</p>
+
+      <div class="row">
+        <div class="col-sm-6 my-3">
+          <div class="card">
+            <h5 class="card-header text-center">Outfit 1</h5>
+            <img src="" id="outfitimg1">
+            <div class="card-body">
+              <h5 class="card-title" id="input1">Voted by </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 my-3">
+          <div class="card">
+            <h5 class="card-header text-center">Outfit 2</h5>
+            <img src="" id="outfitimg2">
+            <div class="card-body">
+              <h5 class="card-title" id="input2">Voted by </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+              <!-- LOGOUT POPUP -->
+              <div class="overlay" id="logoutOverlay">
+                <div class="popup" id="logoutPopup">
+                    <h2>Confirm Log Out?</h2>
+                    <div class="row">
+                        <button class="btn-standard mb-2" onclick="logout()">Yes</button>
+                        <button class="cancelbtn" onclick="closeLogoutPopup()">Back</button>                            
+                    </div>
+                </div>
+              </div>
+    </div>
+
+
+
+    <!-- firebase js stuff  -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <!-- html js --->
+    <script src="js/votepageowner.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

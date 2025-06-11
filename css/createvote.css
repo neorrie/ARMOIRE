@@ -1,0 +1,384 @@
+body {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  min-height: 100%;
+}
+
+.container {
+  /* position: absolute; */
+  /* width: 1200px; */
+  /* height: auto; */
+  /* padding: 80px; */
+  /* padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 80px;
+  padding-right: 80px; */
+  border-radius: 10px;
+  background-color: #F9F6F2;
+  /* margin-top: 300px; */
+  /* margin-bottom: 300px; */
+  /* max-height: 800px; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* margin-top: -350px;   */
+  /* margin-left: -600px;  */
+  margin: 100px;
+  width: 100%;
+}
+
+#containerContent {
+  position: relative;
+  top: 100px;
+}
+
+.container h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  margin-bottom: 20px;
+}
+
+.container label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+  font-family: var(--font-secondary);
+}
+
+/* form */
+.form-control {
+  background-color: #F9F6F2;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+  border-radius: 0px;
+}
+
+.form-control:focus {
+  background-color: #F9F6F2;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid rgba(0, 132, 255);
+  box-shadow: none;
+}
+
+.form-select:focus {
+  border: 2px solid rgba(0, 132, 255);
+  box-shadow: none;
+}
+
+.addOutfit {
+  font-family: var(--font-secondary);
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #fff;
+  background: var(--color-primary);
+  border: 0px;
+}
+
+.addOutfit:hover {
+  background: #F9F6F2;
+  color: #482B1B;
+  border: 2px solid #482B1B;
+}
+
+.wrapper {
+  /* max-width: 500px;
+  width: 100%; */
+  background: rgb(236, 226, 219);
+  /* margin: auto; */
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 10%;
+}
+
+.wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #6a5b53;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.wrapper .form {
+  width: 100%;
+}
+
+.wrapper .form .inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label {
+  width: 200px;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus {
+  border: 1px solid #6a5b53;
+}
+
+.wrapper .form .inputfield p {
+  font-size: 14px;
+  color: #757575;
+}
+
+
+.wrapper .form .inputfield .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: #6a5b53;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover {
+  background: #b1a49d;
+}
+
+.wrapper .form .inputfield:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wrapper .form .inputfield label {
+    margin-bottom: 5px;
+  }
+
+  .wrapper .form .inputfield.terms {
+    flex-direction: row;
+  }
+}
+
+
+.gallery {
+  margin: 40px;
+  padding: 80px 0 80px 0;
+}
+
+.gallery h1 {
+  margin: 0 0 20px 0;
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+}
+
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery .gallery-item img {
+  transition: 0.3s;
+}
+
+.gallery .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  line-height: 1.2;
+  margin: 30px 8px 0 8px;
+}
+
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: #fff;
+}
+
+.gallery .gallery-links .details-link {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.gallery .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery .gallery-item:hover .preview-link,
+.gallery .gallery-item:hover .details-link {
+  margin-top: 0;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Vote Image Selection Div */
+.voteSel {
+  margin: none;
+  padding: 0px;
+}
+
+.outfitSelCard input:checked~.card-content {
+  border: 3px solid rgba(0, 132, 255);
+}
+
+.outfitSelCard .card-content {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  border: none;
+}
+
+
+.outfitSelContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.outfitSelCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 20%;
+  height: 300px;
+  border: none;
+  margin: 2%;
+}
+
+.outfitSelCard input {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.outfitSelCard img {
+  transition: 0.3s;
+  width: 100%;
+  position: relative;
+}
+
+.outfitSelCard:hover img {
+  transform: scale(1.05);
+}
+
+.popup {
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 40px;
+  color: #333;
+  /* visibility: hidden; */
+  display: none;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black background with opacity */
+  z-index: 999;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}

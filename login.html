@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Armoire</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <h1>ARMOIRE</h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html"  class="active">Sign In</a></li>
+        </ul>
+      </nav>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>        
+      
+    </div>
+  </header>
+
+  <!-- End Header -->
+    <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center">
+
+        <div class="container">
+        <div class="row d-flex align-items-center justify-content-center gx-5">
+            <div class="col-lg-5 text-center">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="assets/img/gallery/alexandra-gorn-WF0LSThlRmw-unsplash.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/img/gallery/laura-chouette-W-7k72ThEr0-unsplash.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/img/gallery/marissa-grootes-D4jRahaUaIc-unsplash.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/img/gallery/sarah-dorweiler-gUPiTDBdRe4-unsplash.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/img/gallery/toa-heftiba--abWByT3yg4-unsplash.jpg" class="d-block w-100" alt="">
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+        <div class="col-lg-6 formLayout">
+            <div id="tablink" class="tablink">
+                <ul>
+                    <li><button class="tablink" onclick="openPage('Login', this, '#E5D5C6')" id="defaultOpen">Login</button></li>
+                    <li><button class="tablink" onclick="openPage('SignUpForm', this, '#E5D5C6')" >Sign Up</button></li>
+                </ul>
+            </div>
+                <!-- login -->
+                <div class = "form">
+                    <div id="Login" class="tabcontent">
+                        <h2>Log In</h2>
+                        <p id="loginError" class="errorMessage" style="font-style: italic; color: red"></p>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="Enter Email Address" class="form-control my-3 p-3" name="loginEmail" id="loginEmail"/>
+                            </div>
+                        </div>
+                    
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input type="password" placeholder="Enter Password" class="form-control my-3 p-3" name="loginPassword" id="loginPassword"/>
+                            </div>
+                        </div>
+                    
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <button class="loginbtn w-100 mb-3" onclick="login()">Login</button>
+                            </div>
+                        </div>
+                    
+                        <div>
+                            <p>Don't have an account? <a style="color: rgba(0,132,255); text-decoration: underline;" href="#" onclick="openPage('SignUpForm', this, '#E5D5C6')">Register here</a></p>
+                        </div>
+                    </div>
+
+                    <div id="SignUpForm" class="tabcontent">
+                        <h2>Let's Create Your Account</h2>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" placeholder="Enter Name" class="form-control my-3 p-3" name="regName" id="regName" required/>
+                                <p id="nameError" class="errorMessage" style="font-style: italic; color: red"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="email" placeholder="Enter Email Address" class="form-control my-3 p-3" name="regEmail" id="regEmail" required/>
+                                <p id="emailError" class="errorMessage" style="font-style: italic; color: red"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="password" placeholder="Enter Password (minimum 6 characters)" class="form-control my-3 p-3" name="regPassword" id="regPassword" required/>
+                                <p id="passwordError" class="errorMessage" style="font-style: italic; color: red"></p>
+                            </div>
+                            <div class="col">
+                                <input type="password" placeholder="Re-enter Password" class="form-control my-3 p-3" name="confirmPassword" id="confirmPassword" required/>
+                                <p id="confirmError" class="errorMessage" style="font-style: italic; color: red"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <button class="loginbtn w-100 mb-3" onclick="register()">Sign Up</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>Already have an account? <a style="color: rgba(0,132,255); text-decoration: underline;" href="login.html">Log in</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="overlay"></div>
+                <div class="popup" id="popupSuccess">
+                    <div id="overlay"></div>
+                    <img class="mb-3" src="assets/img/Green Tick Icon.png">
+                    <h2>Signed Up Successfully!</h2>
+                    <button class="btn-standard mb-3 w-100" onclick="startBrowsing()">Continue</button>
+                    <button class="cancelbtn" onclick="closePopup('popupSuccess')">Close</button>
+                </div>
+
+                <!-- Error pop up -->
+                <div class="popup" id="popupError">
+                    <div id="overlay"></div>
+                    <h2 id="errorMessage"></h2>
+                    <button class="cancelbtn" onclick="closePopup('popupError')">Close</button>
+                </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+
+</body>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="js/authentication.js"></script>
+<script src="js/login.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+
+</html>

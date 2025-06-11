@@ -1,0 +1,173 @@
+.container {
+    /* position: absolute; */
+    width: 1200px;
+    /* height: auto; */
+    /* padding: 80px; */
+    /* padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    padding-right: 80px; */
+    border-radius: 10px;
+    background-color: #F9F6F2;
+    /* max-height: 800px; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* margin-top: -350px;   */
+    /* margin-left: -600px;  */
+    
+}
+
+.container h1 {
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    margin-bottom: 20px;
+  }
+
+.container label {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+  }
+
+/* form */
+.form-control {
+    background-color: #F9F6F2;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+    border-radius: 0px;
+}
+
+.form-control:focus {
+  background-color: #F9F6F2;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid rgba(0,132,255);
+  box-shadow: none;
+}
+
+.form-select:focus {
+  border: 2px solid rgba(0,132,255);
+  box-shadow: none;
+}
+
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+#photo {
+  opacity: 0;
+  overflow: hidden;
+}
+
+#photo-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.image-area {
+  border: 2px dashed #6c757d;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.image-area::before {
+  content: 'Uploaded image result';
+  color: #6c757d;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.image-area img {
+  z-index: 2;
+  position: relative;
+}
+
+.uploadImg{
+    /* position: relative; */
+    width: auto;
+    height: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #E5D5C6;
+    top: 50%;
+    left: 50%;
+}
+
+img { max-width: 100%; height: auto; }
+
+body {
+  height: 100%
+}
+
+.invalid-feedback{
+  color: #ff606e;
+}
+
+.valid-feedback{
+ color: #2acc80;
+}
+
+
+.popup{
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  padding: 40px;
+  color: #333;
+  /* visibility: hidden; */
+  display:none;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 1000;
+  }
+    
+.popup img{
+  width: 100px;
+  /* margin-top: -50px; */
+  /* border-radius: 50%; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0,2); */
+  }
+  
+  .popup h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 30px 0 30px;
+  color:#482B1B;
+  }
+
+  .overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+    z-index: 999; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    }

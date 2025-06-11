@@ -1,0 +1,85 @@
+.card {
+    background-color: #F9F6F2;
+}
+
+section {
+    background-color: #E5D5C6;
+}
+
+
+
+h1 {
+    font-family: 'Playfair Display';
+    font-size: 48px;
+    color: #482B1B;
+}
+
+p {
+    padding: 20px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: #6C757D;
+}
+/* 
+button {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    background-color: #482B1B;
+    color: #E5D5C6;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #D0A68E;
+} */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #482B1B;
+}
+
+.container h1 {
+    font-size: 160px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url(../assets/img/gallery/toa-heftiba--abWByT3yg4-unsplash.jpg) center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.indexBtn {
+    font-family: var(--font-secondary);
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    padding: 12px 36px;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    background: var(--color-primary);
+    border: 0px;
+    color: #F9F6F2;
+}
+
+.indexBtn:hover {
+    background: #F9F6F2;
+    border: 2px solid #482B1B; 
+    color:#482B1B;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: var(--font-secondary);
+}
+
